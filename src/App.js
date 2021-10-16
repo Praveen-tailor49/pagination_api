@@ -10,7 +10,7 @@ function App() {
   const [com, setCom] = useState();
   const [userId, setUserId] = useState();
   const [allData , setAlldata] = useState([]);
-  const [postPerPage , setPostPerPage] = useState(10);
+  const [postPerPage] = useState(10);
   const [currentPage ,setCurrentPage] = useState(1);
   
   const show = (e )  =>{
@@ -49,8 +49,7 @@ const paginate = (pageNumber) =>{
   
     <Switch>
       <Route exact path='/' component={Data}>
-      {/* <Data show={show} show_post={show_post}  />
-      <Pagination postPerPage={postPerPage} totalPost={allData} /> */}
+ 
       <Data allData ={currentPost} show ={ show}/>
       <Pagination postPerPage ={ postPerPage} totalPost ={allData} paginate={paginate} />
       </Route>
